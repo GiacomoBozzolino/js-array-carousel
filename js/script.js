@@ -50,7 +50,6 @@ let activeElement = 0
         slides[activeElement].classList.add ('active')
         console.log('next')
     }
-
  })
 
 
