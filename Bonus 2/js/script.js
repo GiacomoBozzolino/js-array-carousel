@@ -1,3 +1,5 @@
+"use strict";
+
 console.log ('main loaded');
 
 // array contenente le immagini
@@ -12,6 +14,7 @@ console.log(images);
 
 
 let sliderElement = document.querySelector('.slider');
+
 let sideElement = document.querySelector('.side');
 
 let sliderContent = '';
@@ -52,7 +55,7 @@ let activeElement = 0
  let prevButton = document.querySelector('.prev')
  let nextButton = document.querySelector('.next')
 
-
+// Funzione bottone avanti
  nextButton.addEventListener('click', function(){
     if (activeElement < (images.length -1) ){
         slides[activeElement].classList.remove ('active')
@@ -60,8 +63,8 @@ let activeElement = 0
         activeElement++;
         slides[activeElement].classList.add ('active')
         side[activeElement].classList.add('active')
-
         console.log('next')
+        // ricomincia il carosello da capo
     } else {
         slides[activeElement].classList.remove ('active')
         side[activeElement].classList.remove('active')
@@ -72,7 +75,7 @@ let activeElement = 0
     }
  })
 
-
+// Funzione bottone indietro
  prevButton.addEventListener('click', function(){
     if (activeElement >0 ){
         slides[activeElement].classList.remove ('active')
@@ -82,6 +85,7 @@ let activeElement = 0
         side[activeElement].classList.add('active')
     
     console.log('prev')
+    // ricomincia il carosello da capo
     } else {
         slides[activeElement].classList.remove ('active')
         side[activeElement].classList.remove('active')
@@ -89,7 +93,6 @@ let activeElement = 0
         slides[activeElement].classList.add ('active')
         side[activeElement].classList.add('active')
         console.log('next')
-
     }
     
  })

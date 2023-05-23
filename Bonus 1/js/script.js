@@ -1,3 +1,6 @@
+"use strict";
+
+
 console.log ('main loaded');
 
 // array contenente le immagini

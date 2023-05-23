@@ -1,4 +1,8 @@
+"use strict";
+
+
 console.log ('main loaded');
+
 
 // array contenente le immagini
 let images = [ './img/01.webp',
