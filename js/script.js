@@ -44,20 +44,25 @@ let activeElement = 0
 
 
  nextButton.addEventListener('click', function(){
-    slides[activeElement].classList.remove ('active')
-    activeElement++;
-    slides[activeElement].classList.add ('active')
-    console.log('next')
+    if (activeElement < (images.length -1) ){
+        slides[activeElement].classList.remove ('active')
+        activeElement++;
+        slides[activeElement].classList.add ('active')
+        console.log('next')
+    }
 
  })
 
 
  prevButton.addEventListener('click', function(){
-    slides[activeElement].classList.remove ('active')
+    if (activeElement >0 ){
+        slides[activeElement].classList.remove ('active')
     activeElement--;
     slides[activeElement].classList.add ('active')
     
     console.log('prev')
+    }
+    
 
  })
 
