@@ -1,11 +1,11 @@
 console.log ('main loaded');
 
 // array contenente le immagini
-let images = [ 'img/01.jpg',
-            'img/02.jpg',
-            'img/03.jpg',
-            'img/04.jpg',
-            'img/05.jpg',
+let images = [ './img/01.webp',
+            './img/02.webp',
+            './img/03.webp',
+            './img/04.webp',
+            './img/05.webp',
 ];
 
 console.log(images);
@@ -22,12 +22,21 @@ for( let i = 0; i < images.length; i++){
     let currentImage = images[i];
 
     sliderContent +=`
-    <div class="slide active">
-    <img src="${currentImage}">
-    </div>`
+        <div class="slide">
+            <img src="${currentImage}">
+        </div>`;
+};
 
-    
+console.log(sliderContent);
 
-}
+sliderElement.innerHTML = sliderContent;
 
-console.log(sliderContent)
+let slides = document.getElementsByClassName('slide');
+
+
+// aggiungo la classe active all'elemento selezionato in modo che sia visibile sulla pagina
+let activeElement = 0
+ slides[activeElement].classList.add('active')
+
+
+
