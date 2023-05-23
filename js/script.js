@@ -38,5 +38,28 @@ let slides = document.getElementsByClassName('slide');
 let activeElement = 0
  slides[activeElement].classList.add('active')
 
+//  recupero dei pulsanti dall'html
+ let prevButton = document.querySelector('.prev')
+ let nextButton = document.querySelector('.next')
+
+
+ nextButton.addEventListener('click', function(){
+    slides[activeElement].classList.remove ('active')
+    activeElement++;
+    slides[activeElement].classList.add ('active')
+    console.log('next')
+
+ })
+
+
+ prevButton.addEventListener('click', function(){
+    slides[activeElement].classList.remove ('active')
+    activeElement--;
+    slides[activeElement].classList.add ('active')
+    
+    console.log('prev')
+
+ })
+
 
 
