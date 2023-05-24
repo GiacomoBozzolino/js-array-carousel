@@ -46,6 +46,7 @@
 
 .side_slide.active{
     opacity: 1;
+    border: 2px white solid;
 }
 
 .side_slide{
@@ -72,11 +73,11 @@ img{
     cursor: pointer;
 }
 
-.next{
+.prev{
     top:2%;
 }
 
-.prev{ 
+.next{ 
     bottom:2%;
 }
 
